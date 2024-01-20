@@ -1,4 +1,4 @@
-# ConceptQA+V-IP
+# Concept-QA+V-IP
 
 **Aditya Chattopadhyay<sup>1</sup>, Kwan Ho Ryan Chan<sup>2</sup>, and René Vidal<sup>2</sup>** <br>
 
