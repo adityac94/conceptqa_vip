@@ -1,0 +1,40 @@
+
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to ./data/cifar-100-python.tar.gz
+ 94%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎        | 158793728/169001437 [00:04<00:00, 37572711.07it/s]
+Traceback (most recent call last):
+  File "/cis/home/achatto1/.local/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 39, in _save_response_content
+    for chunk in content:
+  File "/cis/home/achatto1/.local/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 50, in <lambda>
+    _save_response_content(iter(lambda: response.read(chunk_size), b""), filename, length=response.length)
+  File "/cis/home/achatto1/anaconda3/lib/python3.8/http/client.py", line 458, in read
+    n = self.readinto(b)
+  File "/cis/home/achatto1/anaconda3/lib/python3.8/http/client.py", line 502, in readinto
+    n = self.fp.readinto(b)
+  File "/cis/home/achatto1/anaconda3/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/cis/home/achatto1/anaconda3/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/cis/home/achatto1/anaconda3/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "train_concept_qa.py", line 278, in <module>
+    main(dataset_name, args.num_epochs, args.batch_size)
+  File "train_concept_qa.py", line 205, in main
+    train_ds, test_ds = get_data(dataset_name, preprocess)
+  File "/cis/home/achatto1/conceptqa_vip/utils.py", line 58, in get_data
+    train_ds = torchvision.datasets.CIFAR100(root="./data", train=True, download=True, transform=transform)
+  File "/cis/home/achatto1/.local/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 65, in __init__
+    self.download()
+  File "/cis/home/achatto1/.local/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 141, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/cis/home/achatto1/.local/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 446, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/cis/home/achatto1/.local/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 156, in download_url
+    _urlretrieve(url, fpath)
+  File "/cis/home/achatto1/.local/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 50, in _urlretrieve
+    _save_response_content(iter(lambda: response.read(chunk_size), b""), filename, length=response.length)
+  File "/cis/home/achatto1/.local/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 45, in _save_response_content
+    pbar.update(len(chunk))
+KeyboardInterrupt

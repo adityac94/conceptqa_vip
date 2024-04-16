@@ -1,0 +1,14 @@
+Files already downloaded and verified
+Files already downloaded and verified
+cifar10 (10, 128)
+/cis/home/achatto1/.local/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+  3%|████▏                                                                                                                                                              | 10/391 [00:04<02:32,  2.50it/s]
+Traceback (most recent call last):
+  File "train_concept_qa.py", line 278, in <module>
+    main(dataset_name, args.num_epochs, args.batch_size)
+  File "train_concept_qa.py", line 216, in main
+    train(train_ds, batch_size, dataset_name, model, optimizer, scheduler, gpt_answers)
+  File "train_concept_qa.py", line 104, in train
+    image_features = model_clip.encode_image(image.cuda())
+KeyboardInterrupt

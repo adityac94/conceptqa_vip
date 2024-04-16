@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "train_concept_qa.py", line 267, in <module>
+    main(dataset_name)
+  File "train_concept_qa.py", line 203, in main
+    train_ds, val_ds, test_ds = get_data(dataset_name, preprocess)
+  File "/cis/home/achatto1/conceptqa_vip/utils.py", line 71, in get_data
+    train_ds = CUB_dataset.CUBDataset(
+  File "/cis/home/achatto1/conceptqa_vip/CUB_dataset.py", line 48, in __init__
+    with open(file_path, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/CUB/trainclass_level_all_features.pkl'

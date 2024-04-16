@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.15.0-71-generic-x86_64-with-glibc2.10",
+    "python": "3.8.5",
+    "heartbeatAt": "2024-04-16T06:09:11.198605",
+    "startedAt": "2024-04-16T06:09:10.655119",
+    "docker": null,
+    "gpu": "NVIDIA RTX A5000",
+    "gpu_count": 8,
+    "cpu_count": 112,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train_concept_qa.py",
+    "codePath": "train_concept_qa.py",
+    "git": {
+        "remote": "git@github.com:adityac94/conceptqa_vip.git",
+        "commit": "9af3708ba0951ab8467b1e88a3119ea591c21a81"
+    },
+    "email": "achatto1@jh.edu",
+    "root": "/cis/home/achatto1/conceptqa_vip",
+    "host": "io88",
+    "username": "achatto1",
+    "executable": "/cis/home/achatto1/anaconda3/bin/python"
+}

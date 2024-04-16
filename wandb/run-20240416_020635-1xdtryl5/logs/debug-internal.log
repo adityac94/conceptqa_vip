@@ -1,0 +1,148 @@
+2024-04-16 02:06:36,571 INFO    StreamThr :3419311 [internal.py:wandb_internal():88] W&B internal server running at pid: 3419311, started at: 2024-04-16 02:06:36.009763
+2024-04-16 02:06:36,575 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: status
+2024-04-16 02:06:36,582 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: status
+2024-04-16 02:06:36,586 DEBUG   SenderThread:3419311 [sender.py:send():303] send: header
+2024-04-16 02:06:36,586 DEBUG   SenderThread:3419311 [sender.py:send():303] send: run
+2024-04-16 02:06:36,588 INFO    WriterThread:3419311 [datastore.py:open_for_write():75] open: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/run-1xdtryl5.wandb
+2024-04-16 02:06:36,907 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: check_version
+2024-04-16 02:06:37,015 INFO    SenderThread:3419311 [dir_watcher.py:__init__():216] watching files in: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files
+2024-04-16 02:06:37,015 INFO    SenderThread:3419311 [sender.py:_start_run_threads():928] run started: 1xdtryl5 with start time 1713247595.99607
+2024-04-16 02:06:37,015 DEBUG   SenderThread:3419311 [sender.py:send():303] send: summary
+2024-04-16 02:06:37,018 INFO    SenderThread:3419311 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2024-04-16 02:06:37,019 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: check_version
+2024-04-16 02:06:37,190 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: run_start
+2024-04-16 02:06:38,021 INFO    Thread-13 :3419311 [dir_watcher.py:_on_file_created():275] file/dir created: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/wandb-summary.json
+2024-04-16 02:06:38,324 DEBUG   HandlerThread:3419311 [meta.py:__init__():34] meta init
+2024-04-16 02:06:38,324 DEBUG   HandlerThread:3419311 [meta.py:__init__():49] meta init done
+2024-04-16 02:06:38,324 DEBUG   HandlerThread:3419311 [meta.py:probe():215] probe
+2024-04-16 02:06:38,370 DEBUG   HandlerThread:3419311 [meta.py:_setup_git():205] setup git
+2024-04-16 02:06:38,399 DEBUG   HandlerThread:3419311 [meta.py:_setup_git():212] setup git done
+2024-04-16 02:06:38,399 DEBUG   HandlerThread:3419311 [meta.py:_save_pip():53] save pip
+2024-04-16 02:06:38,403 DEBUG   HandlerThread:3419311 [meta.py:_save_pip():67] save pip done
+2024-04-16 02:06:38,404 DEBUG   HandlerThread:3419311 [meta.py:_save_conda():74] save conda
+2024-04-16 02:06:39,025 INFO    Thread-13 :3419311 [dir_watcher.py:_on_file_created():275] file/dir created: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/requirements.txt
+2024-04-16 02:06:39,026 INFO    Thread-13 :3419311 [dir_watcher.py:_on_file_created():275] file/dir created: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/conda-environment.yaml
+2024-04-16 02:06:53,923 DEBUG   HandlerThread:3419311 [meta.py:_save_conda():84] save conda done
+2024-04-16 02:06:53,924 DEBUG   HandlerThread:3419311 [meta.py:probe():253] probe done
+2024-04-16 02:06:54,051 INFO    Thread-13 :3419311 [dir_watcher.py:_on_file_modified():292] file/dir modified: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/conda-environment.yaml
+2024-04-16 02:06:54,052 INFO    Thread-13 :3419311 [dir_watcher.py:_on_file_created():275] file/dir created: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/wandb-metadata.json
+2024-04-16 02:06:57,144 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: stop_status
+2024-04-16 02:06:57,148 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: poll_exit
+2024-04-16 02:06:57,148 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: keepalive
+2024-04-16 02:06:57,148 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: keepalive
+2024-04-16 02:06:57,150 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: stop_status
+2024-04-16 02:06:57,265 DEBUG   SenderThread:3419311 [sender.py:send():303] send: telemetry
+2024-04-16 02:06:57,269 DEBUG   SenderThread:3419311 [sender.py:send():303] send: exit
+2024-04-16 02:06:57,270 INFO    SenderThread:3419311 [sender.py:send_exit():442] handling exit code: 1
+2024-04-16 02:06:57,270 INFO    SenderThread:3419311 [sender.py:send_exit():444] handling runtime: 19
+2024-04-16 02:06:57,275 INFO    SenderThread:3419311 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2024-04-16 02:06:57,276 INFO    SenderThread:3419311 [sender.py:send_exit():450] send defer
+2024-04-16 02:06:57,276 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: poll_exit
+2024-04-16 02:06:57,276 DEBUG   SenderThread:3419311 [sender.py:send():303] send: files
+2024-04-16 02:06:57,276 INFO    SenderThread:3419311 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2024-04-16 02:06:57,278 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:06:57,279 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 0
+2024-04-16 02:06:57,280 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:06:57,280 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 0
+2024-04-16 02:06:57,280 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 1
+2024-04-16 02:06:57,282 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:06:57,282 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 1
+2024-04-16 02:06:57,626 INFO    Thread-17 :3419311 [upload_job.py:push():143] Uploaded file /tmp/tmpa9trblupwandb/3krahpb2-wandb-metadata.json
+2024-04-16 02:06:57,783 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:06:57,783 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 1
+2024-04-16 02:06:57,783 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 2
+2024-04-16 02:06:57,784 DEBUG   SenderThread:3419311 [sender.py:send():303] send: stats
+2024-04-16 02:06:57,786 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:06:57,787 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 2
+2024-04-16 02:06:57,787 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:06:57,787 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 2
+2024-04-16 02:06:57,787 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 3
+2024-04-16 02:06:57,788 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:06:57,788 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 3
+2024-04-16 02:06:57,789 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:06:57,789 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 3
+2024-04-16 02:06:57,789 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 4
+2024-04-16 02:06:57,790 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:06:57,790 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 4
+2024-04-16 02:06:57,791 DEBUG   SenderThread:3419311 [sender.py:send():303] send: summary
+2024-04-16 02:06:57,795 INFO    SenderThread:3419311 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2024-04-16 02:06:57,795 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:06:57,795 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 4
+2024-04-16 02:06:57,795 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 5
+2024-04-16 02:06:57,796 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:06:57,796 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 5
+2024-04-16 02:06:57,796 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:06:57,796 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 5
+2024-04-16 02:06:57,907 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 6
+2024-04-16 02:06:57,908 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:06:57,908 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 6
+2024-04-16 02:06:57,908 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:06:57,908 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 6
+2024-04-16 02:06:58,057 INFO    Thread-13 :3419311 [dir_watcher.py:_on_file_modified():292] file/dir modified: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/wandb-summary.json
+2024-04-16 02:06:58,057 INFO    Thread-13 :3419311 [dir_watcher.py:_on_file_modified():292] file/dir modified: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/config.yaml
+2024-04-16 02:06:58,058 INFO    Thread-13 :3419311 [dir_watcher.py:_on_file_created():275] file/dir created: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/output.log
+2024-04-16 02:06:58,210 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: keepalive
+2024-04-16 02:06:59,280 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 7
+2024-04-16 02:06:59,281 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:06:59,281 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 7
+2024-04-16 02:06:59,282 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:06:59,282 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 7
+2024-04-16 02:06:59,282 INFO    SenderThread:3419311 [dir_watcher.py:finish():362] shutting down directory watcher
+2024-04-16 02:07:00,061 INFO    SenderThread:3419311 [dir_watcher.py:_on_file_modified():292] file/dir modified: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/output.log
+2024-04-16 02:07:00,061 INFO    SenderThread:3419311 [dir_watcher.py:finish():392] scan: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files
+2024-04-16 02:07:00,062 INFO    SenderThread:3419311 [dir_watcher.py:finish():406] scan save: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/config.yaml config.yaml
+2024-04-16 02:07:00,063 INFO    SenderThread:3419311 [dir_watcher.py:finish():406] scan save: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/wandb-summary.json wandb-summary.json
+2024-04-16 02:07:00,070 INFO    SenderThread:3419311 [dir_watcher.py:finish():406] scan save: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/requirements.txt requirements.txt
+2024-04-16 02:07:00,071 INFO    SenderThread:3419311 [dir_watcher.py:finish():406] scan save: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/conda-environment.yaml conda-environment.yaml
+2024-04-16 02:07:00,078 INFO    SenderThread:3419311 [dir_watcher.py:finish():406] scan save: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/wandb-metadata.json wandb-metadata.json
+2024-04-16 02:07:00,078 INFO    SenderThread:3419311 [dir_watcher.py:finish():406] scan save: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/output.log output.log
+2024-04-16 02:07:00,079 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 8
+2024-04-16 02:07:00,099 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:07:00,099 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 8
+2024-04-16 02:07:00,099 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:07:00,100 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 8
+2024-04-16 02:07:00,100 INFO    SenderThread:3419311 [file_pusher.py:finish():168] shutting down file pusher
+2024-04-16 02:07:00,380 INFO    Thread-22 :3419311 [upload_job.py:push():143] Uploaded file /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/output.log
+2024-04-16 02:07:00,398 INFO    Thread-19 :3419311 [upload_job.py:push():143] Uploaded file /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/wandb-summary.json
+2024-04-16 02:07:00,412 INFO    Thread-21 :3419311 [upload_job.py:push():143] Uploaded file /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/conda-environment.yaml
+2024-04-16 02:07:00,421 INFO    Thread-18 :3419311 [upload_job.py:push():143] Uploaded file /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/config.yaml
+2024-04-16 02:07:00,433 INFO    Thread-20 :3419311 [upload_job.py:push():143] Uploaded file /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/files/requirements.txt
+2024-04-16 02:07:00,633 INFO    Thread-12 :3419311 [sender.py:transition_state():463] send defer: 9
+2024-04-16 02:07:00,635 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:07:00,635 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 9
+2024-04-16 02:07:00,635 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:07:00,636 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 9
+2024-04-16 02:07:00,636 INFO    SenderThread:3419311 [file_pusher.py:join():173] waiting for file pusher
+2024-04-16 02:07:00,636 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 10
+2024-04-16 02:07:00,637 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:07:00,637 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 10
+2024-04-16 02:07:00,637 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:07:00,637 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 10
+2024-04-16 02:07:00,710 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 11
+2024-04-16 02:07:00,711 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:07:00,711 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 11
+2024-04-16 02:07:00,712 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:07:00,712 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 11
+2024-04-16 02:07:00,712 INFO    SenderThread:3419311 [sender.py:transition_state():463] send defer: 12
+2024-04-16 02:07:00,713 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: defer
+2024-04-16 02:07:00,714 INFO    HandlerThread:3419311 [handler.py:handle_request_defer():161] handle defer: 12
+2024-04-16 02:07:00,714 DEBUG   SenderThread:3419311 [sender.py:send():303] send: final
+2024-04-16 02:07:00,714 DEBUG   SenderThread:3419311 [sender.py:send():303] send: footer
+2024-04-16 02:07:00,715 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: defer
+2024-04-16 02:07:00,715 INFO    SenderThread:3419311 [sender.py:send_request_defer():459] handle sender defer: 12
+2024-04-16 02:07:00,717 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: poll_exit
+2024-04-16 02:07:00,717 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: poll_exit
+2024-04-16 02:07:00,720 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: server_info
+2024-04-16 02:07:00,720 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: get_summary
+2024-04-16 02:07:00,721 DEBUG   SenderThread:3419311 [sender.py:send_request():317] send_request: server_info
+2024-04-16 02:07:00,726 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: sampled_history
+2024-04-16 02:07:00,883 INFO    MainThread:3419311 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2024-04-16 02:07:00,884 INFO    MainThread:3419311 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2024-04-16 02:07:00,884 INFO    MainThread:3419311 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2024-04-16 02:07:00,885 DEBUG   HandlerThread:3419311 [handler.py:handle_request():138] handle_request: shutdown
+2024-04-16 02:07:00,885 INFO    HandlerThread:3419311 [handler.py:finish():814] shutting down handler
+2024-04-16 02:07:01,714 INFO    WriterThread:3419311 [datastore.py:close():279] close: /cis/home/achatto1/conceptqa_vip/wandb/run-20240416_020635-1xdtryl5/run-1xdtryl5.wandb
+2024-04-16 02:07:01,883 INFO    SenderThread:3419311 [sender.py:finish():1331] shutting down sender
+2024-04-16 02:07:01,883 INFO    SenderThread:3419311 [file_pusher.py:finish():168] shutting down file pusher
+2024-04-16 02:07:01,883 INFO    SenderThread:3419311 [file_pusher.py:join():173] waiting for file pusher
+2024-04-16 02:07:01,890 INFO    MainThread:3419311 [internal.py:handle_exit():78] Internal process exited
