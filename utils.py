@@ -35,7 +35,7 @@ def get_data(dataset, transform):
 
     if dataset == "places365":
         train_ds = custom_dataset.Places365_clip(
-            root="data/Places365",
+            root="data/Places365_clip",
             split="train-standard",
             small=True,
             download=False,
@@ -43,7 +43,7 @@ def get_data(dataset, transform):
         )
 
         test_ds = custom_dataset.Places365_clip(
-            root="data/Places365",
+            root="data/Places365_clip",
             split="val",
             small=True,
             download=False,
