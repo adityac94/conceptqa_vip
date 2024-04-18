@@ -3,7 +3,7 @@ import os
 import numpy as np
 import torch
 import torchvision
-
+from torch.nn import functional as F
 import CUB_dataset, custom_dataset
 
 
@@ -230,3 +230,27 @@ def clip_preprocess(tensors, size):
     ])
 
     return transform(tensors)
+
+def get_pretrained_actor_classifier_filenames(dataset_name):
+    if dataset_name == "imagenet":
+        actor_filename = f"saved_models/{dataset_name}/model_actor_{dataset_name}_vip_biased_clip_finetuned_adaptive_0.0_611_0.4_cutoff_different_opt_500_num_queries.pth"
+        classifier_filename = f"saved_models/{dataset_name}/model_classifier_{dataset_name}_vip_biased_clip_finetuned_adaptive_0.0_611_0.4_cutoff_different_opt_500_num_queries.pth"
+
+    elif dataset_name == "places365":
+        actor_filename = f"saved_models/{dataset_name}/model_actor_places365_vip_biased_clip_finetuned_adaptive_0.0_611_0.4_cutoff_500_num_queries.pth"
+        classifier_filename = f"saved_models/{dataset_name}/model_classifier_places365_vip_biased_clip_finetuned_adaptive_0.0_611_0.4_cutoff_500_num_queries.pth"
+
+    elif dataset_name == "cub":
+        actor_filename = f"saved_models/{dataset_name}/model_actor_cub_vip_biased_clip_finetuned_adaptive_0.0.pth"
+        classifier_filename = f"saved_models/{dataset_name}/model_classifier_cub_vip_biased_clip_finetuned_adaptive_0.0.pth"
+    
+    elif dataset_name == "cifar100":
+        actor_filename = f"saved_models/{dataset_name}/model_actor_cifar100_vip_biased_clip_finetuned_adaptive_0.0.pth"
+        classifier_filename = f"saved_models/{dataset_name}/model_classifier_cifar100_vip_biased_clip_finetuned_adaptive_0.0.pth"
+
+    elif dataset_name == "cifar10":
+        actor_filename = f"saved_models/{dataset_name}/model_actor_cifar10_vip_biased_clip_finetuned_adaptive_0.0.pth"
+        classifier_filename = f"saved_models/{dataset_name}/model_classifier_cifar10_vip_biased_clip_finetuned_adaptive_0.0.pth"
+    
+
+    return actor_filename, classifier_filename
