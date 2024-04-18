@@ -17,12 +17,9 @@ from archs.vip_network import Network, ConceptNet2
 import random
 from archs.network_cifar100 import densenet201, densenet161, densenet169, densenet121
 import train_concept_qa
+import argparse
 
 rs = 0 # random seed
-BATCH_SZ = 128
-BATCH_SZ_TEST = 128
-
-NUM_EPOCHS = 2000
 Cosine_T_Max = 200
 THRESHOLD = 0.85
 EVAL_FREQUENCY = 1
@@ -65,61 +62,29 @@ def get_vip_networks(dataset_name, mode, MAX_QUERIES):
         actor = Network(query_size=MAX_QUERIES, output_size=MAX_QUERIES, eps=EPS).cuda()
         classifier = Network(query_size=MAX_QUERIES, output_size=200, eps=None).cuda()
 
-        if mode == "biased":
-            actor.load_state_dict(torch.load(
-                f"saved_models/{dataset_name}/model_actor_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}_1290_0.4_cutoff.pth"))
-            classifier.load_state_dict(torch.load(
-                f"saved_models/{dataset_name}/model_classifier_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}_1290_0.4_cutoff.pth"))
-
-    if dataset_name == "cub":
+    elif dataset_name == "cub":
         actor = Network(query_size= MAX_QUERIES, output_size=MAX_QUERIES, eps=EPS).cuda()
         classifier = Network(query_size= MAX_QUERIES, output_size= 200, eps=None).cuda()
-
-        if mode == "biased":
-            actor.load_state_dict(torch.load(f"saved_models/{dataset_name}/model_actor_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}.pth"))
-            classifier.load_state_dict(torch.load(f"saved_models/{dataset_name}/model_classifier_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}.pth"))
 
     elif dataset_name == "cifar10":
         actor = Network(query_size=MAX_QUERIES, output_size=MAX_QUERIES, eps=EPS).cuda()
         classifier = Network(query_size=MAX_QUERIES, output_size=10, eps=None).cuda()
 
-        if mode == "biased" and MAX_QUERIES == 128:
-            actor.load_state_dict(
-                torch.load(f"saved_models/{dataset_name}/model_actor_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}.pth"))
-            classifier.load_state_dict(
-                torch.load(f"saved_models/{dataset_name}/model_classifier_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}.pth"))
-
     elif dataset_name == "cifar100":
         actor = Network(query_size=MAX_QUERIES, output_size=MAX_QUERIES, eps=EPS).cuda()
         classifier = Network(query_size=MAX_QUERIES, output_size=100, eps=None).cuda()
-
-        if mode == "biased":
-            actor.load_state_dict(
-                torch.load(f"saved_models/{dataset_name}/model_actor_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}.pth"))
-            classifier.load_state_dict(
-                torch.load(f"saved_models/{dataset_name}/model_classifier_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}.pth"))
-
 
     elif dataset_name == "imagenet":
         actor = Network(query_size=MAX_QUERIES, output_size=MAX_QUERIES, eps=EPS).cuda()
         classifier = Network(query_size=MAX_QUERIES, output_size=1000, eps=None).cuda()
 
-        if mode == "biased":
-            actor.load_state_dict(
-                torch.load(f"saved_models/{dataset_name}/model_actor_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}_611_0.4_cutoff.pth"))
-            classifier.load_state_dict(
-                torch.load(f"saved_models/{dataset_name}/model_classifier_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}_611_0.4_cutoff.pth"))
-
     elif dataset_name == "places365":
         actor = Network(query_size=MAX_QUERIES, output_size=MAX_QUERIES, eps=EPS).cuda()
         classifier = Network(query_size=MAX_QUERIES, output_size=365, eps=None).cuda()
 
-        if mode == "biased":
-            actor.load_state_dict(
-                torch.load(f"saved_models/{dataset_name}/model_actor_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}_1850_0.4_cutoff.pth"))
-            classifier.load_state_dict(
-                torch.load(f"saved_models/{dataset_name}/model_classifier_{dataset_name}_vip_random_clip_finetuned_adaptive_{REG_WEIGHT}_1850_0.4_cutoff.pth"))
-
+    if mode == "biased":
+        actor.load_state_dict(torch.load(f"saved_models/{dataset_name}/model_actor_{dataset_name}_vip_random.pth"))
+        classifier.load_state_dict(torch.load(f"saved_models/{dataset_name}/model_classifier_{dataset_name}_vip_random.pth"))
 
     return actor, classifier
 
@@ -127,16 +92,16 @@ def get_max_queries(dataset_name):
     if dataset_name == "cub":
         return 208
     elif dataset_name == "cifar10":
-        return 128 #66 + 128 #128 #66
+        return 128
 
     elif dataset_name == "cifar100":
-        return 824 #66 + 128 #128 #66
+        return 824 
 
     elif dataset_name == "imagenet":
-        return 4523 #66 + 128 #128 #66
+        return 4523 
 
     elif dataset_name == "places365":
-        return 2207 #66 + 128 #128 #66
+        return 2207 
 
     elif dataset_name == "cub_annotated":
         return 312
@@ -418,8 +383,8 @@ def train(train_ds, val_ds, concept_net, dataset_name, discrete=False, mode="ran
                 torch.save(classifier.state_dict(), f"saved_models/{dataset_name}/model_classifier_" + wandb.run.name + "_best.pth")
 
                 if mode == "random":
-                    torch.save(optimizer.state_dict(), f"saved_models/{dataset_name}/model_" + wandb.run.name + "_optimizer.pth")
-                    torch.save(scheduler.state_dict(), f"saved_models/{dataset_name}/model_" + wandb.run.name + "_scheduler.pth")
+                    torch.save(optimizer.state_dict(), f"saved_models/{dataset_name}/model_" + wandb.run.name + "_optimizeri_best.pth")
+                    torch.save(scheduler.state_dict(), f"saved_models/{dataset_name}/model_" + wandb.run.name + "_scheduler_best.pth")
 
                 elif mode == "biased":
                     torch.save(optimizer1.state_dict(), f"saved_models/{dataset_name}/model_" + wandb.run.name + "_optimizer1_best.pth")
@@ -489,9 +454,34 @@ if __name__ == "__main__":
     devices = GPUtil.getAvailable(limit=float("inf"), maxLoad=0.1, maxMemory=0.05)
     print(", ".join([str(d) for d in devices]))
     os.environ["CUDA_VISIBLE_DEVICES"] = ", ".join([str(d) for d in devices])
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-epochs", "--num_epochs", type=int, default=4000)
+    parser.add_argument("-bs", "--batch_size", type=int, default=128)
+    parser.add_argument(
+        "-dataset",
+        "--dataset_name",
+        type=str,
+        required=True,
+        choices=["imagenet", "places365", "cub", "cifar10", "cifar100"],
+    )
+    parser.add_argument(
+        "-mode",
+        "--training_mode",
+        type=str,
+        required=True,
+        choices=["random", "biased"],
+    )
+    args = parser.parse_args()
 
-    dataset_name = "cifar10"
-    mode = "random"
+    dataset_name = args.dataset_name
+
+    mode = args.training_mode
+
+    BATCH_SZ = args.batch_size
+    BATCH_SZ_TEST = args.batch_size
+
+    NUM_EPOCHS = args.num_epochs
 
     if dataset_name in ["cub", "cub_annotated", "imagenet", "places365"]:
         THRESHOLD_FOR_BINARIZATION = -0.4
