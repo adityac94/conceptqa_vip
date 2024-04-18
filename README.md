@@ -17,7 +17,14 @@ Variational Information Pursuit (V-IP) is an interpretable-by-design framework t
 
 
 ## Requirements
-Please check out `requirements.txt` for detailed requirements. We also use `wandb` to moderate training and testing performance. One may remove lines related to `wandb` and switch to other packages if they desire. 
+This project uses the `conda` package manager. Currently we only support Linux environments.
+On Linux, type
+```
+conda env create -f environment.yml
+```
+Once this command has finished, you can activate the environment with `conda activate`.
+ 
+We also use `wandb` to moderate training and testing performance. One may remove lines related to `wandb` and switch to other packages if they desire. 
 
 ## Datasets
 This code supports 5 datasets: Cifar10, Cifar100, CUB-200, Places365 and Imagenet.
